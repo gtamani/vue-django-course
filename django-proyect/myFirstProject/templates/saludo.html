@@ -1,0 +1,18 @@
+{% extends "main-template.html" %}
+
+{% block title %} Hey everyone! {% endblock%}
+
+{% block content %} 
+
+<div>
+    <h3>Hi <span style="color:chocolate;">{{user_name}} {{user_surname}}!</span> this is our first Django page!</h1>
+    <p>Temas del curso:</p>
+    <ul>
+        {% if user_name == "Giuliano" %}
+        {% for i in to_learn %}<li>{{i}}</li>{% endfor %}
+        {% else %} <p> No hay elementos que mostrar.</p> 
+        {% endif %} </ul>
+</div>
+
+{% endblock %}
+
