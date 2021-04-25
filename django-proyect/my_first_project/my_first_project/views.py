@@ -34,4 +34,5 @@ def get_date(request):
 
 def get_age(request, future_year, actual_age):
     future_age = actual_age + future_year - datetime.datetime.now().year 
-    return HttpResponse("En %s vas a tener %s años."%(future_year,future_age))
+    context = {"future_age":future_age,"future_year":future_year}
+    return render(request,"get_age.html",context)

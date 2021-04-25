@@ -1,0 +1,37 @@
+1. django-admin startproyect {{my-first-django-proyect}}
+2. manage.py migrate
+
+3. manage.py runserver
+Starting development server at http://127.0.0.1:8000/
+
+python manage.py startapp *app_name*
+python manage.py check *app_name*
+python manage.py makemigrations
+python manage.py sqlmigrate *app_name* *num_migration* 
+python manage.py migrate
+
+python manage.py shell
+from *app_name.models* import *class_name*
+
+art = *class_name*.objects.create(name="my_name") #Crear registros
+art.*column* = 90 #Modificar valor
+*class_name".objects.get(id=2).delete #Borrar registros
+my_list = *class_name*.objects.all()
+
+
+(MIGRACIONES)
+INSTALLED_APPS = [
+    'django.contrib.admin', #Interfaz administrativa
+    'django.contrib.auth', #Sistema de autenticación
+    'django.contrib.contenttypes', #
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+PROYECTO != APLICACIÓN
+los proyectos pueden utilizarse en varias aplicaciones
+una aplicación puede tener varios, uno o ningún proyecto
+
+Django no puede crear tablas si no está adentro de una aplicación
+
