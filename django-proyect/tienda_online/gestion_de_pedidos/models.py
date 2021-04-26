@@ -4,8 +4,8 @@ from django.db import models
 
 class Clientes(models.Model):
     name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
-    email = models.EmailField()
+    address = models.CharField(max_length=30, verbose_name="Your adress")
+    email = models.EmailField(blank=True,null=True)
     phone = models.CharField(max_length=30)
 
 class Merchandising(models.Model):
@@ -13,8 +13,10 @@ class Merchandising(models.Model):
     section = models.CharField(max_length=30)
     price = models.IntegerField()
 
+    def __str__(self):
+        return "%s - $%s" % (self.name.capitalize(),self.price)
+
 class Pedidos(models.Model):
-    id = models.IntegerField(primary_key=True)
     date = models.DateField()
     entregados = models.BooleanField()
 
