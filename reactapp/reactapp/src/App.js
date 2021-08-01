@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import FirstComponent from './components/FirstComponent';
 import Properties from './components/Properties';
+import State from './components/State';
+import ConditionalRender from './components/ConditionalRender';
+import ElementsRender from './components/ElementsRender';
+import {EventsES6,EventsES7} from './components/Events';
 
 function App() {
   const weathers = ["Spring","Winter","Autumn","Summer"]
@@ -35,6 +39,11 @@ function App() {
         reactElement={<p><i>This is an italic JSX element from a prop.</i></p>}
         function={num=>num**2}
         component={<FirstComponent name="Roberto"/>}/>
+        <State/>
+        <ConditionalRender/>
+        <ElementsRender/>
+        <EventsES6/>
+        <EventsES7/>
       </section>
     </div>
   );
