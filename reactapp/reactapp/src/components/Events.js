@@ -66,3 +66,33 @@ export class EventsES7 extends Component{
         )
     }
 }
+
+function Button({myOnClick}) {
+    return(<button onClick={myOnClick}>Botón hecho componente</button>)
+}
+
+
+
+export class MoreAboutEvents extends Component{
+    handleClick = (e,message) => {
+        // Evento nativo - Vanilla Javascript
+        console.log(e.nativeEvent)
+        // Evento sintético - Synthetic Base Event
+        console.log(e)
+
+        console.log(message)
+
+    }
+    
+    render(){
+        return(
+            <div>
+                <h2>More about events</h2>
+                <button onClick={(e) => this.handleClick(e,"This is a message from an arrow function.")}>Saludar</button>    
+                {/* onClick no funciona en componentes sino en elementos JSX */}
+                {/* Por eso los eventos no se definen en componentes, sino en etiquetas nativas */}
+                <Button myOnClick={(e) => this.handleClick(e,"This is a message from an arrow function.")}>Saludar</Button> 
+            </div>
+        )
+    }
+}

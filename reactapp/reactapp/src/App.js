@@ -5,7 +5,10 @@ import Properties from './components/Properties';
 import State from './components/State';
 import ConditionalRender from './components/ConditionalRender';
 import ElementsRender from './components/ElementsRender';
-import {EventsES6,EventsES7} from './components/Events';
+import {EventsES6,EventsES7,MoreAboutEvents} from './components/Events';
+import Parent from './components/DataBinding';
+import LifeCycle from './components/LifeCiycle';
+import AjaxApi from './components/AjaxApi';
 
 function App() {
   const weathers = ["Spring","Winter","Autumn","Summer"]
@@ -44,6 +47,10 @@ function App() {
         <ElementsRender/>
         <EventsES6/>
         <EventsES7/>
+        <MoreAboutEvents/>
+        <Parent/>
+        <LifeCycle/>
+        <AjaxApi/>
       </section>
     </div>
   );
