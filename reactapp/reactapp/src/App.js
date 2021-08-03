@@ -9,6 +9,11 @@ import {EventsES6,EventsES7,MoreAboutEvents} from './components/Events';
 import Parent from './components/DataBinding';
 import LifeCycle from './components/LifeCiycle';
 import AjaxApi from './components/AjaxApi';
+import HooksCounter from './components/HooksCounter';
+import HooksScroll from './components/HooksScroll';
+import HookClock from './components/HooksClock';
+import HooksAjax from './components/HooksAjax';
+import CustomHooks from './components/CustomHook';
 
 function App() {
   const weathers = ["Spring","Winter","Autumn","Summer"]
@@ -51,6 +56,11 @@ function App() {
         <Parent/>
         <LifeCycle/>
         <AjaxApi/>
+        <HooksCounter title="clicks"/>
+        <HooksScroll/>
+        <HookClock/>
+        <HooksAjax/>
+        <CustomHooks/>
       </section>
     </div>
   );
